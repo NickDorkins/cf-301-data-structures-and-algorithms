@@ -86,13 +86,15 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
-const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
+const courseInfo = { 
+  name: 'Code 301', 
+duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
 };
 
 const getCourseKeys = (obj) => {
-  // Solution code here...
+  let getCourseKeys = courseInfo[courseInfo.name, courseInfo.duration, courseInfo.topics, courseInfo.finalExam];
 };
 
 /* ------------------------------------------------------------------------------------------------
