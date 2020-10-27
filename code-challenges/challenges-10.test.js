@@ -7,7 +7,27 @@ Build a simple express server. Connect a '/hello' route that sends a greeting of
 ------------------------------------------------------------------------------------------------ */
 
 const createServer = () => {
-  // Solution code here...
+  const express = require('express');
+  const app = express();
+  app.use('/hello', helloHandler);
+  app.use('/aboutme', aboutMeHandler);
+  app.use('/favoritefoods', favoriteFoodsHandler);
+  app.use('/foo', errorHandler);
+
+  function helloHandler (request, response) {
+    response.status(200).send('Potato');
+  }
+
+  function aboutMeHandler (request, response) {
+    response.status(200).send('French Fries');
+  }
+
+  function favoriteFoodsHandler (request, response) {
+    response.status(200).send('Moshed Potatoes');
+  }
+  function errorHandler(request, response) {
+    response.status(404).send('Works? ¯\_(ツ)_/¯')
+  }
 
   var server = app.listen(3301, function () {
     var port = server.address().port;
@@ -27,7 +47,16 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  // Solution code here...
+  input = 5;
+  input.filter((target) => {
+    value.filter((input) => {
+      if (input === 5){
+        return input; 
+      } else () => {
+        
+      }}) 
+  })
+  return input;
 };
 
 /* ------------------------------------------------------------------------------------------------
