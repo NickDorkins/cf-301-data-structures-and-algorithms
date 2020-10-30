@@ -23,8 +23,9 @@ let $ = createSnippetWithJQuery(`
 `);
 
 const generateSubmitButton = () => {
-
-}
+let $button = ('<button>submit</button>');
+$('form').append($button);
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -39,10 +40,12 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  if (NaN) {
-    return false;
-  } else {
+  let reg = /[0-9]/g;
+  input = String(input);
+  if(input.match(reg)) {
     return true;
+  } else {
+    return false;
   }
 };
 
@@ -55,7 +58,12 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  let reg = /[A-Z]\w+/g;
+  if (reg.test(str)) {
+    return str.match(reg);
+  } else {
+    return[];
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,9 +73,15 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  const reg = /^[A-J]/;
+  const array = [];
+   arr.forEach((element) => {
+    if(reg.test(element)) {
+      array.push(element);
+    } 
+   });
+   return array;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
 
@@ -80,7 +94,7 @@ If the user enters any of these four inputs, return true. For any other input, r
 Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
-const matchMonth = (input) => {
+let matchMonth = (input) => {
   // Solution code here...
 };
 
