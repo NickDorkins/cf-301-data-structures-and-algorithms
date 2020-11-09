@@ -1,0 +1,17 @@
+{
+  "name": "code-challenges",
+  "version": "1.0.0",
+  "description": "Part of growing as a programmer is to practice, practice, practice. Throughout this course, you will complete a set of daily code challenges. Each set will contain up to ten problems.",
+  "main": "challenges-01.test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "superagent": "^6.1.0"
+  }
+}
