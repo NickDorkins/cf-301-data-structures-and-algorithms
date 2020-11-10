@@ -12,7 +12,17 @@ const createServer = () => {
   const express = require('express');
   const app = express();
 
-  // solution code goes here ...
+  app.get('/', (request, response) => {
+    response.status(200).send();
+  });
+
+  app.delete('/things/1', (request, response) => {
+    response.status(405).send();
+  });
+
+  app.use('*', (request, response) => {
+    response.status(404).send();
+  });
 
   var server = app.listen(3000, function () {
     var port = server.address().port;
